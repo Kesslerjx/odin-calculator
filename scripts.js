@@ -29,8 +29,10 @@ function buttonPressed(element) {
             screen.textContent = screenValue;
         break;
         default: //equal
+
             //Ensure the first value is set, an opertaor is set and the second value can be set with what's displayed on the screen
-            if(first != "" && operator != "" && screenValue != "") {
+            //Convert first to string becauase it becomes a number after an answer has been found
+            if(String(first) != ""  && operator != "" && screenValue != "") {
                 let answer = operate(operator, first, screenValue);
 
                 //Check for decimal places in the answer

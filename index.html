@@ -5,6 +5,9 @@
     <title>Odin Calculator</title>
     <link rel="stylesheet" href="./styles.css">
     <script src="./scripts.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="content">
@@ -14,26 +17,34 @@
                 <button id="clear" onclick="buttonPressed(this)">Clear</button>
                 <button id="delete" onclick="buttonPressed(this)">Delete</button>
             </div>
-            <div class="numbers">
-                <button id="nine" onclick="numberPressed(this)">9</button>
-                <button id="eight" onclick="numberPressed(this)">8</button>
-                <button id="seven" onclick="numberPressed(this)">7</button>
-                <button id="six" onclick="numberPressed(this)">6</button>
-                <button id="five" onclick="numberPressed(this)">5</button>
-                <button id="four" onclick="numberPressed(this)">4</button>
-                <button id="three" onclick="numberPressed(this)">3</button>
-                <button id="two" onclick="numberPressed(this)">2</button>
-                <button id="one" onclick="numberPressed(this)">1</button>
-                <button id="zero" onclick="numberPressed(this)">0</button>
-                <button id="period" onclick="numberPressed(this)">.</button>
-                <button id="equal" onclick="buttonPressed(this)">=</button>
+
+            <div class="numbers-operators">
+                <div class="numbers">
+                    <button id="seven" onclick="numberPressed(this)">7</button>
+                    <button id="eight" onclick="numberPressed(this)">8</button>
+                    <button id="nine" onclick="numberPressed(this)">9</button>
+                    
+                    <button id="four" onclick="numberPressed(this)">4</button>
+                    <button id="five" onclick="numberPressed(this)">5</button>
+                    <button id="six" onclick="numberPressed(this)">6</button>
+
+                    <button id="one" onclick="numberPressed(this)">1</button>
+                    <button id="two" onclick="numberPressed(this)">2</button>
+                    <button id="three" onclick="numberPressed(this)">3</button>
+
+                    <button id="zero" onclick="numberPressed(this)">0</button>
+                    <button id="period" onclick="numberPressed(this)">.</button>
+                    <button id="equal" onclick="buttonPressed(this)">=</button>
+                </div>
+                <div class="operators">
+                    <button id="add" onclick="operatorPressed(this)">+</button>
+                    <button id="minus" onclick="operatorPressed(this)">&#8722;</button>
+                    <button id="multiply" onclick="operatorPressed(this)">&times;</button>
+                    <button id="divide" onclick="operatorPressed(this)">&#247;</button>
+                </div>
+
             </div>
-            <div class="operators">
-                <button id="add" onclick="operatorPressed(this)">+</button>
-                <button id="minus" onclick="operatorPressed(this)">&#8722;</button>
-                <button id="multiply" onclick="operatorPressed(this)">&times;</button>
-                <button id="divide" onclick="operatorPressed(this)">&#247;</button>
-            </div>
+            
         </div>
     </div>
     
