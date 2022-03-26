@@ -14,8 +14,19 @@ let screenValue = "";
 function buttonPressed(element) {
     switch(element.id) {
         case 'clear':
+            //Reset values
+            first = "";
+            second = "";
+            operator = "";
+            screenValue = "";
+            screen.textContent = "";
         break;
         case 'delete':
+            //Remove last character from screenValue
+            screenValue = screenValue.slice(0, -1);
+
+            //Update screen
+            screen.textContent = screenValue;
         break;
         default: //equal
             //Ensure the first value is set, an opertaor is set and the second value can be set with what's displayed on the screen
