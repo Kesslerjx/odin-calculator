@@ -82,11 +82,14 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    font-size: x-large;
 }
 
 .operators button {
     width: 75px;
     flex: 1 1 25%;
+    background-color: #711c91;
+    color: white;
 }
 
 .numbers {
