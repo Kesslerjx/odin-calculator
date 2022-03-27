@@ -73,6 +73,12 @@ function operatorPressed(element) {
         if(operator == "" && screenValue != "") {
             //Save first number
             first = screenValue;
+
+            //Clear screenValue
+            screenValue = "";
+
+            //Save operator
+            operator = element.id;
         } else if (operator != "" && screenValue != ""){
             //Save second number
             second = screenValue;
@@ -88,18 +94,30 @@ function operatorPressed(element) {
                 answer = answer.toFixed(2);
             }
 
-            //Set first number to answer
-            first = answer;
+            if(answer == Infinity) {
+                //Reset everything
+                first = "";
+                second = "";
+                operator = "";
+                screenValue = "";
 
-            //Update screen with that
-            screen.textContent = first;
+                //Display a message
+                screen.textContent = "To infinity and beyond!";
+            } else {
+                //Set first number to answer
+                first = answer;
+
+                //Update screen with that
+                screen.textContent = first;
+
+                //Clear screenValue
+                screenValue = "";
+
+                //Save operator
+                operator = element.id;
+            }
+            
         }
-
-        //Clear screenValue
-        screenValue = "";
-
-        //Save operator
-        operator = element.id;
     }
 }
 
